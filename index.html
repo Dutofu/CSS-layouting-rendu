@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Microblogging</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Logo</div>
+        <div class="menu">
+            <ul>
+                <li>Accueil</li>
+                <li>Explorer</li>
+                <li>Notifications</li>
+                <li>Messages</li>
+            </ul>
+        </div>
+        <div class="user-actions">
+            <button class="btn">Connexion</button>
+            <button class="btn">Inscription</button>
+        </div>
+        <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+
+    <div class="main-layout">
+
+        <aside class="popular-tags">Aside content</aside>
+
+
+        <main class="tweet-list">
+
+            <div class="tweet">
+
+                <div class="tweet-header">
+                    <div class="user-photo">Photo</div>
+                    <div class="user-info">
+                        <p>Nom d'utilisateur</p>
+                        <p>@handle</p>
+                    </div>
+                </div>
+
+                <div class="tweet-content">
+                    <p>Contenu du tweet...</p>
+                </div>
+            </div>
+
+            <div class="tweet">
+
+                <div class="tweet-header">
+                    <div class="user-photo">Photo</div>
+                    <div class="user-info">
+                        <p>Nom d'utilisateur</p>
+                        <p>@handle</p>
+                    </div>
+                </div>
+
+                <div class="tweet-content">
+                    <p>Contenu du tweet...</p>
+                </div>
+            </div>
+
+            <div class="tweet">
+
+                <div class="tweet-header">
+                    <div class="user-photo">Photo</div>
+                    <div class="user-info">
+                        <p>Nom d'utilisateur</p>
+                        <p>@handle</p>
+                    </div>
+                </div>
+
+                <div class="tweet-content">
+                    <p>Contenu du tweet...</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
