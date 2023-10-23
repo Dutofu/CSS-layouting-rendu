@@ -5,12 +5,14 @@ body {
 
 .navbar {
     width: 100%;
+    height: fit-content;
     margin: 5px 0px;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     background-color: #5d1b66;
     color: rgb(255, 255, 255);
@@ -40,7 +42,7 @@ body {
 
 .btn {
     font-size: 20px;
-    margin-right: 10px;
+    margin: 10px;
     padding: 8px 15px;
     background-color: #f1f1f1;
     color: #000000;
@@ -74,7 +76,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid #ccc;
+    border: 2px solid #8f2b9c;
     margin: 10px;
     border-radius: 25px;
 }
@@ -89,11 +91,13 @@ main {
     padding: 10px;
 }
 
-.user-photo {
+.twt-header img {
     width: 50px;
     height: 50px;
-    background-color: #ddd;
     margin-right: 10px;
+    border: solid 2px black;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .user-info p {
@@ -125,52 +129,77 @@ aside li {
     margin: 10px;
 }
 
+.menu-btn{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 35px;
+    color: black;
+}
+
 @media screen and (max-width: 800px){
-    .navbar {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 10px;
-        grid-template-areas: "a c" 
-                             "b c";
-    }
 
-    .navbar img {
-        grid-area: a;
-    }
-
-    .nav-menu{
-        grid-area: b;
-    }
-
-    .div-btn{
-        grid-area: c;
+    .nav-menu {
+        order: 1;
     }
 
     .layout {
-        margin-inline: 10px;
-        margin-block: 220px;
+        margin-block: 180px;
     }
 
+    aside {
+        position: static;
+    }
 
-}
-
-@media screen and (max-width: 600px) {
     .layout {
         grid-template-columns: 1fr;
     }
-
 
     main {
         order: 1;
     }
 
     .twt {
-        width: 100%;
         grid-column: span 2;
     }
+}
 
-    .btn {
+/* Bonus: menu burger */
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .menu-btn {
         display: block;
+    }
+
+    .nav-menu {
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        opacity: 80%;
+        margin-left: -100%;
+        transition: all 0.5s ease;   
+    }
+
+    .mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .nav-menu ul li {
+        margin: 25px;
     }
     
 }

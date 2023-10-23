@@ -1,3 +1,6 @@
-document.querySelector('.burger-menu').addEventListener('click', function() {
-    document.querySelector('.menu ul').classList.toggle('show');
-});
+const menubtn = document.querySelector(".menu-btn");
+const navmenu = document.querySelector(".nav-menu");
+
+menubtn.addEventListener('click',()=>{
+    navmenu.classList.toggle('mobile-menu');
+})
