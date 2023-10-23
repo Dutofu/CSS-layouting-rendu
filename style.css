@@ -87,6 +87,7 @@ main {
     justify-content: center;
     border: 2px solid #8f2b9c;
     margin: 10px;
+    padding: 20px;
     border-radius: 25px;
 }
 
@@ -98,6 +99,7 @@ main {
     display: flex;
     align-items: center;
     padding: 10px;
+    gap: 15px;
 }
 
 .twt-header img {
